@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+        
+        @font-face {
+            font-family: 'FonteScreen';
+            src: url(Press_Start_2P/PressStart2P-Regular.ttf);
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 2fr 2fr;
+            gap: 20px;
+            grid-template-areas: 
+                "screen" "blank"
+                "option" "try";
+            padding: 40px 60px;
+            width: 50%;
+            margin: 100px auto 100px auto;
+            background-color: rgb(247, 237, 218);
+            border-style: ridge;
+            border-color: rgba(225, 216, 200, 0.661);
+            border-radius: 10px;
+                              
+        }
+        
+        .option{
+            display: inline-flex;   
+            align-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 15vh;            
+            margin: 0 auto;
+            background-color: rgb(103, 102, 102);
+            width: 100%;
+            border-radius: 10px;
+            border-color: rgb(103, 102, 102);
+            border-style: inset;            
+        }
+
+        .optA{
+            background-color: red;
+            width: 85px;
+            height: 85px;
+            border-color: whitesmoke;
+            border-radius: 10px;
+            border-style: groove;
+            border-width: 5px; 
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            transform: skew(-20deg);
+        }
+
+        .optB{
+            background-color: yellow;
+            width: 85px;
+            height: 85px;
+            border-color: whitesmoke;
+            border-radius: 10px;
+            border-style: groove;
+            border-width: 5px; 
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            transform: skew(-20deg);
+        }
+
+        .optC{
+            background-color: blue;
+            width: 85px;
+            height: 85px;
+            border-color: whitesmoke;
+            border-radius: 10px;
+            border-style: groove;
+            border-width: 5px; 
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            transform: skew(-20deg);
+        }
+
+        .optD{
+            background-color: green;
+            width: 85px;
+            height: 85px;
+            border-color: whitesmoke;
+            border-radius: 10px;
+            border-style: groove;
+            border-width: 5px;            
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            transform: skew(-20deg);
+        }
+
+        .reset{
+            background-color: white;
+            width: 70px;
+            height: 70px;
+            border-color: black;
+            border-radius: 10px;
+            border-style: groove;
+            border-width: 5px;
+            color: blue;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 9px;
+            
+        }
+        .screen {
+            background-color: black;
+            color: red;
+            border-radius: 10px;            
+            text-align: right;                       
+            border-style: inset;           
+            border-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            font-family: 'FonteScreen';
+            font-size: 56px;
+            
+        }
+
+        .blank{
+            background-color: rgb(247, 237, 218);
+            border-radius: 10px;
+            border-style: ridge;
+            border-color: rgba(225, 216, 200, 0.661);
+        }
+
+        .try{
+            display: flex;     
+            align-content: center;
+            height: 100%;
+            justify-content: space-evenly;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .try p{
+            text-align: center;          
+            
+        }
+
+        .attempt{
+            background-color: white;
+            color: blue;
+            text-transform: uppercase;
+            font-weight: bold;
+            height: 50%;
+            margin: 0;
+            align-content: center;
+            border-color: white;
+            border-top-style: ridge;
+            border-left-style: ridge;
+            border-right-style: ridge;
+            border-radius: 10px 10px 0 0;
+            border-width: 5px;      
+        }
+        
+        .count{
+            background-color: red;
+            color: white;
+            
+            font-weight: bold;
+            height: 50%;
+            margin: 0;
+            align-content: center;
+            border-color: red;
+            border-bottom-style: ridge;
+            border-left-style: ridge;
+            border-right-style: ridge;
+            border-radius: 0 0 10px 10px;
+            border-width: 5px;
+        }
