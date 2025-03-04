@@ -15,19 +15,23 @@ btnIniciar.addEventListener('click', event => {
   switch (codInput) {
     case '101':
       gabarito = gabarito1
-      // Adicionar musica
+      play_game.play()
+      alert('Jogo iniciado!')
       break
     case '102':
       gabarito = gabarito2
-      // Adicionar musica
+      play_game.play()
+      alert('Jogo iniciado!')
       break
     case '103':
       gabarito = gabarito3
-      // Adicionar musica
+      play_game.play()
+      alert('Jogo iniciado!')
       break
     case '104':
       gabarito = gabarito4
-      // Adicionar musica
+      play_game.play()
+      alert('Jogo iniciado!')
       break
   }
 })
