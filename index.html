@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pense Bem</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="screen"></div>
-        <div class="blank">
-            <p>Pontuação: </p>
-            <p class="pontuacao"></p>
+      <div class="screen">
+        <form action="">
+          <input type="number" class="cod" />
+          <button class="btn-submit" type="submit">Iniciar</button>
+        </form>
+        <p class="question"></p>
+      </div>
+      <div class="blank">
+        <p>Pontuação:</p>
+        <p class="pontuacao"></p>
+      </div>
+      <div class="option">
+        <button class="optA options">A</button>
+        <button class="optB options">B</button>
+        <button class="optC options">C</button>
+        <button class="optD options">D</button>
+        <div>
+          <button class="reset">Reiniciar</button>
         </div>
-        <div class="option">            
-            <button class="optA options">A</button>
-            <button class="optB options">B</button>
-            <button class="optC options">C</button>
-            <button class="optD options">D</button>
-            <div>
-                <button class="reset">Reiniciar</button>
-            </div>
-        </div>
-        <div class="try">
-            <p class="attempt">Tentativas</p>
-            <p class="count"></p>
-        </div>
-
+      </div>
+      <div class="try">
+        <p class="attempt">Tentativas</p>
+        <p class="count"></p>
+      </div>
     </div>
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>
