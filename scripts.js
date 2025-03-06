@@ -6,11 +6,14 @@ const screen = document.querySelector('.question')
 const getInput = document.querySelector('.cod')
 const btnIniciar = document.querySelector('.btn-submit')
 const imagem = document.querySelector('.imagem')
-console.log(imagem)
 
-const images = ['./assets/Question-01.png', './assets/Question-02.png', './assets/Question-03.png']
+const images1 = ['./assets/Question-01.png', './assets/Question-02.png', './assets/Question-03.png']
+const images2 = []
+const images3 = []
+const images4 = []
 
 let gabarito
+let imagensGabarito
 
 btnIniciar.addEventListener('click', event => {
   // Ver se da para tirar o evento de submit
@@ -20,21 +23,28 @@ btnIniciar.addEventListener('click', event => {
   switch (codInput) {
     case '101':
       gabarito = gabarito1
+      imagensGabarito = images1
       play_game.play()
       alert('Jogo iniciado!')
       break
     case '102':
       gabarito = gabarito2
+      imagensGabarito = images2
+
       play_game.play()
       alert('Jogo iniciado!')
       break
     case '103':
       gabarito = gabarito3
+      imagensGabarito = images3
+
       play_game.play()
       alert('Jogo iniciado!')
       break
     case '104':
       gabarito = gabarito4
+      imagensGabarito = images4
+
       play_game.play()
       alert('Jogo iniciado!')
       break
@@ -93,19 +103,9 @@ options.forEach(option => {
 
     count.innerText = `${tentativas + 1} de 3`
 
-    
-    switch (index) {
-      case 0:
-        imagem.src = images[index]
-        break
-      case 1:
-        imagem.src = images[index]
-        break
-      case 2:
-        imagem.src = images[index]
-        break
+    if (index < imagensGabarito.length) {
+      imagem.src = imagensGabarito[index]
     }
-    console.log('index: ' + index)
 
     if (index < 8) {
       screen.innerText = index + 1
