@@ -5,8 +5,13 @@ const pontos = document.querySelector('.pontuacao')
 const screen = document.querySelector('.question')
 const getInput = document.querySelector('.cod')
 const btnIniciar = document.querySelector('.btn-submit')
+const imagem = document.querySelector('.imagem')
+console.log(imagem)
+
+const images = ['./assets/Question-01.png', './assets/Question-02.png', './assets/Question-03.png']
 
 let gabarito
+
 btnIniciar.addEventListener('click', event => {
   // Ver se da para tirar o evento de submit
   event.preventDefault()
@@ -73,7 +78,6 @@ options.forEach(option => {
           pontuacao += 1
           break
       }
-
       pontos.innerText = pontuacao
       tentativas = 0
       index += 1
@@ -89,11 +93,25 @@ options.forEach(option => {
 
     count.innerText = `${tentativas + 1} de 3`
 
+    
+    switch (index) {
+      case 0:
+        imagem.src = images[index]
+        break
+      case 1:
+        imagem.src = images[index]
+        break
+      case 2:
+        imagem.src = images[index]
+        break
+    }
+    console.log('index: ' + index)
+
     if (index < 8) {
       screen.innerText = index + 1
     }
 
-    if (index >= gabarito1.length) {
+    if (index >= gabarito.length) {
       alert(`Quiz finalizado!`)
     }
 
