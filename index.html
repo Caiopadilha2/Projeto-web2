@@ -6,6 +6,7 @@
     <title>Pense Bem</title>
     <link rel="stylesheet" href="style.css" />
     <audio id="play_game" src="play_game.mp3"></audio>
+    <audio id="error" src="error.mp3"></audio>
   </head>
   <body>
     <div class="container">
@@ -14,10 +15,10 @@
           <input type="number" class="cod" />
           <button class="btn-submit" type="submit">Iniciar</button>
         </form>
-        <p class="question"></p>
+        <p class="question">-></p>
       </div>
       <div class="blank">
-        <p>Pontuação:</p>
+        <p class="pontuacao">Pontuação:</p>
         <p class="pontuacao"></p>
       </div>
       <div class="option">
@@ -33,8 +34,8 @@
         <p class="attempt">Tentativas</p>
         <p class="count"></p>
       </div>
+      <img src="" alt="" class="imagem" />
     </div>
-    <img src="./assets/Question-01.png" alt="" class="imagem">
     <script src="scripts.js"></script>
   </body>
 </html>

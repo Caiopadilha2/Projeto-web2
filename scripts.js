@@ -7,7 +7,11 @@ const getInput = document.querySelector('.cod')
 const btnIniciar = document.querySelector('.btn-submit')
 const imagem = document.querySelector('.imagem')
 
-const images1 = ['./assets/Question-01.png', './assets/Question-02.png', './assets/Question-03.png']
+const images1 = [
+  './assets/Question-01.png',
+  './assets/Question-02.png',
+  './assets/Question-03.png'
+]
 const images2 = []
 const images3 = []
 const images4 = []
@@ -24,12 +28,15 @@ btnIniciar.addEventListener('click', event => {
     case '101':
       gabarito = gabarito1
       imagensGabarito = images1
+      imagem.src = imagensGabarito[0]
+
       play_game.play()
       alert('Jogo iniciado!')
       break
     case '102':
       gabarito = gabarito2
       imagensGabarito = images2
+      imagem.src = imagensGabarito[0]
 
       play_game.play()
       alert('Jogo iniciado!')
@@ -37,6 +44,7 @@ btnIniciar.addEventListener('click', event => {
     case '103':
       gabarito = gabarito3
       imagensGabarito = images3
+      imagem.src = imagensGabarito[0]
 
       play_game.play()
       alert('Jogo iniciado!')
@@ -44,6 +52,7 @@ btnIniciar.addEventListener('click', event => {
     case '104':
       gabarito = gabarito4
       imagensGabarito = images4
+      imagem.src = imagensGabarito[0]
 
       play_game.play()
       alert('Jogo iniciado!')
@@ -64,7 +73,7 @@ count.innerText = `${tentativas + 1} de 3`
 pontos.innerText = pontuacao
 
 if (index <= 8) {
-  screen.innerText = index + 1
+  screen.innerText = `-> ${index + 1}`
 }
 
 options.forEach(option => {
@@ -94,21 +103,28 @@ options.forEach(option => {
     } else {
       console.log(`Errou! tentativa: ${tentativas + 1}!`)
       tentativas += 1
+      error.play()
 
       if (tentativas === 3) {
         tentativas = 0
+        error.play()
+
         index += 1
       }
     }
 
+    console.log(index + 'index')
+
     count.innerText = `${tentativas + 1} de 3`
+
+    imagem.src = imagensGabarito[0]
 
     if (index < imagensGabarito.length) {
       imagem.src = imagensGabarito[index]
     }
 
     if (index < 8) {
-      screen.innerText = index + 1
+      screen.innerText = `-> ${index + 1}`
     }
 
     if (index >= gabarito.length) {
@@ -126,5 +142,6 @@ reset.addEventListener('click', () => {
   count.innerText = `${tentativas + 1} de 3`
   pontos.innerText = pontuacao
   screen.innerText = 1
+  imagem.src = ''
   alert('Quiz reiniciado!')
 })
