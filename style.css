@@ -223,7 +223,7 @@
 }
 
 .imagem {
-  display: flex;
+  width: 500px;
 }
 
 /* Utilities  */
